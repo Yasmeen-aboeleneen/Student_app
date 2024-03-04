@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:student_app/Core/Constants/Constants.dart';
+import 'package:student_app/Login&signin/LoginScreen.dart';
 
 class SplashScreenBody extends StatelessWidget {
   const SplashScreenBody({super.key});
@@ -10,6 +11,10 @@ class SplashScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushNamedAndRemoveUntil(
+          context, LoginScreen.routeName, (route) => false);
+    });
     return Scaffold(
       body: Center(
         child: Row(

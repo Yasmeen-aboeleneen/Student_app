@@ -10,9 +10,6 @@ const Color kContainerColor = Color(0xFF777777);
 const Color kTextLightColor = Color(0xFFA5A5A5);
 const Color kErrorBorderColor = Color(0xFFE74C3C);
 
-//Default Value
-const kDefaultPadding = 20;
-
 //Validation for mobile
 const String mobilePattern = r'(^(?:[+0]9)?[0-9{10,12}$]';
 
