@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 import 'package:student_app/Core/Constants/Constants.dart';
 import 'package:student_app/Core/Widgets/Buttons.dart';
@@ -82,6 +81,7 @@ class _BottomContainerState extends State<BottomContainer> {
                         } else if (regExp.hasMatch(value)) {
                           return "Please enter vailed email";
                         }
+                        return null;
                       },
                     ),
                     SizedBox(
@@ -138,6 +138,7 @@ class _BottomContainerState extends State<BottomContainer> {
                         if (value!.length < 8) {
                           return "please enter at least 8 characters  ";
                         }
+                        return null;
                       },
                     ),
                     SizedBox(
@@ -160,12 +161,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     SizedBox(
                       height: 1.h,
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        if (_formKey.currentState!.validate()) {}
-                      },
-                      child: const LoginButton(),
-                    ),
+                    const LoginButton(),
                     SizedBox(
                       height: 1.h,
                     ),

@@ -53,6 +53,7 @@ flutter:
   assets:
     - Assets\Images\splash.png
     - Assets\Images\student_profile.jpeg
+    - Assets\Images\boy hair.jpeg
     - Assets\Icons\ask.svg
     - Assets\Icons\assignment.svg
     - Assets\Icons\datesheet.svg
