@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:student_app/Core/Constants/Constants.dart';
+import 'package:student_app/Screens/ProfileScreen.dart';
 import 'package:student_app/Widgets/ItemsOfListView.dart';
 import 'package:student_app/Widgets/StudentData.dart';
 
@@ -33,7 +35,9 @@ class HomeScreenBody extends StatelessWidget {
                           height: 1.h,
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Get.to(ProfileScreen());
+                          },
                           child: const CircleAvatar(
                               maxRadius: 60,
                               minRadius: 60,
