@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 import 'package:student_app/Core/Constants/Constants.dart';
+import 'package:student_app/Widgets/ItemsOfListView.dart';
+import 'package:student_app/Widgets/StudentData.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -24,57 +24,10 @@ class HomeScreenBody extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Row(
-                              children: [
-                                Text(
-                                  'Hi,',
-                                  style: TextStyle(
-                                      fontSize: 23.sp,
-                                      fontWeight: FontWeight.w100,
-                                      color: kTextWhiteColor),
-                                ),
-                                Text(
-                                  'Yousef',
-                                  style: TextStyle(
-                                      fontSize: 23.sp,
-                                      fontWeight: FontWeight.bold,
-                                      color: kTextWhiteColor),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: .2.h,
-                            ),
-                            Text(
-                              'Class 2-B || Primary ',
-                              style: TextStyle(
-                                  fontSize: 17.sp,
-                                  fontWeight: FontWeight.w100,
-                                  color: kTextWhiteColor),
-                            ),
-                            SizedBox(
-                              height: 1.h,
-                            ),
-                            Container(
-                              height: 27,
-                              width: 115,
-                              decoration: BoxDecoration(
-                                  color: kOtherColor,
-                                  borderRadius: BorderRadius.circular(60)),
-                              child: Center(
-                                child: Text(
-                                  '2024-2025 ',
-                                  style: TextStyle(
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.w700,
-                                      color: kTextBlackColor),
-                                ),
-                              ),
-                            ),
-                          ],
+                        const StudentData(
+                          studentName: 'Yousef',
+                          classlevel: 'Class 2-B || Primary ',
+                          stuYear: '2024-2025',
                         ),
                         SizedBox(
                           height: 1.h,
@@ -117,7 +70,7 @@ class HomeScreenBody extends StatelessWidget {
                                 Text(
                                   '98.9% ',
                                   style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 18.sp,
                                       fontWeight: FontWeight.w700,
                                       color: kTextBlackColor),
                                 )
@@ -147,7 +100,7 @@ class HomeScreenBody extends StatelessWidget {
                                 Text(
                                   "1200 \$ ",
                                   style: TextStyle(
-                                      fontSize: 15.sp,
+                                      fontSize: 18.sp,
                                       fontWeight: FontWeight.w700,
                                       color: kTextBlackColor),
                                 )
@@ -172,6 +125,9 @@ class HomeScreenBody extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(60),
                           topRight: Radius.circular(60))),
+                  child: const Padding(
+                      padding: EdgeInsets.only(top: 30),
+                      child: ItemesOfListView()),
                 ),
               ),
             )
