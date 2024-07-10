@@ -14,18 +14,18 @@ class _LoginButtonState extends State<LoginButton> {
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return  Padding(
       padding: EdgeInsets.only(right: 18.w, left: 18.w),
       child: SizedBox(
         height: 7.h,
         child: TextButton(
           onPressed: () {
-             Navigator.pushNamedAndRemoveUntil(
+            Navigator.pushNamedAndRemoveUntil(
+                context, HomeScreenBody.routeName, (route) => false);
+            if (_formKey.currentState!.validate()) {
+              Navigator.pushNamedAndRemoveUntil(
                   context, HomeScreenBody.routeName, (route) => false);
-            // if (_formKey.currentState.validate()) {
-            //   Navigator.pushNamedAndRemoveUntil(
-            //       context, HomeScreenBody.routeName, (route) => false);
-            // }
+            }
           },
           child: Center(
             child: Text(
